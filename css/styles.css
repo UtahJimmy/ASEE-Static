@@ -1,0 +1,153 @@
+* {
+    font-family: Arial, sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h1 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+#tab1-Options,#tab2-Options,#tab3-Options,#tab4-Options {
+    background-color: brown;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-content: space-around;
+    height: 420px;
+    margin:0 auto;
+    padding:10px;
+    margin-right:15px;
+}
+
+#container input {
+    height: 2.5em;
+    visibility: hidden;
+}
+
+#container label {
+    background: #f9f9f9;  /* Fondo de las pestañas */
+    border-radius: .25em .25em 0 0;
+    color: #888;  /* Color del texto de las pestañas */
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 1em;  /* Tamaño del texto de las pestañas */
+    height: 2.5em;
+    line-height: 2.5em;
+    margin-right: .25em;
+    padding: 0 2.5em;
+    text-align: center;
+}
+
+#container input:hover + label {
+    background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
+    color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+
+#container input:checked + label {
+    background: #f1f1f1;  /* Fondo de las pestañas al presionar */
+    color: #444; /* Color de las pestañas al presionar */
+    position: relative;
+    z-index: 6;
+}
+
+#content {
+    background: #f1f1f1;  /* Fondo del contenido */
+    border-radius: 0 .25em .25em .25em;
+    min-height: 20em;  /* Alto del contenido */
+    position: relative;
+    width: 80%;
+    z-index: 5;
+    overflow:hidden;
+}
+
+#content div {
+    opacity: 1;
+    padding: 1.5em;
+    position: absolute;
+    z-index: -100;
+
+    /*
+    transition: all linear 0.1s;
+    */
+}
+
+#content-1, #content-2, #content-3, #content-4 {
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items:left;
+}
+
+#tab1-map, #tab2-map, #tab3-map, #tab4-map {
+    height: 550px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2,
+#container input#tab-3:checked ~ #content #content-3,
+#container input#tab-4:checked ~ #content #content-4{
+    opacity: 0;
+    z-index: 100;
+}
+
+.sbtn {
+
+    display: inline-block;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 120px;
+    height: 35px;
+
+    padding-left:12px;      /* Interior padding for button*/
+    padding-right: 12px;        /* Interior padding for button*/
+
+    background-color: #E9E6ED;   /* Button fill color */
+    border: 3px solid #919191;  /*button border data*/
+    color: #B4B4B4;             /*font color*/
+
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+}
+#tabOptions{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 420px;
+    width: 120px;
+    /*padding: 20px;*/
+    margin-right: 1em;
+    margin-left: 1em;
+
+}
+
+#mapid{
+    height: 550px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.wrapper{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input.visible {
+    visibility: visible !important;
+}
