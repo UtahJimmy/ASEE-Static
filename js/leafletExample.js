@@ -10,8 +10,8 @@ var maxZoom = startZoom;
 var minZoom = startZoom;
 var slcLocation = [40.710,-111.870];
 var loc2 = [43.710,-94.870];
-var loc3 = [0.710,4.870];
-var loc4 = [100,-100];
+var loc3 = [44.710,-92.870];
+var loc4 = [46.710,-97.870];
 
 
 var mapSettings = {
